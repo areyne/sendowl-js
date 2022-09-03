@@ -144,8 +144,7 @@ class Products extends Resource {
         return res;
     }
 }
-export const SendOwl = function (options) {
-    options = options || {};
+export const SendOwl = function (options = {}) {
     this.orders = new Orders(options);
     this.products = new Products(options);
 };
