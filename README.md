@@ -53,7 +53,7 @@ Filter for orders.search()
 ```js
 filter = {
     // These are mutually exclusive - you can only use one or the other, not both.
-    term: 'searchTerm'      // Search for this term in all order fields
+    term: 'searchTerm',     // Search for this term in all order fields
     email: 'searchEmail'    // Search for this specifically in the email field.
 }
 ```
@@ -82,10 +82,10 @@ productUpdate = {
 
 Retrieving licenses for products
 ```js
-const productId = [productId] // replace [productId] with your product ID
-sendowl.products.licenses(`${productId}`, true) // this will only return AVAILABLE licenses
-sendowl.products.licenses(`${productId}`, false) // this will only return USED licenses
-sendowl.products.licenses(`${productId}`) // this will return ALL licenses
+const productId = [productId]; // replace [productId] with your product ID
+sendowl.products.licenses(productId, true); // this will only return AVAILABLE licenses
+sendowl.products.licenses(productId, false); // this will only return USED licenses
+sendowl.products.licenses(productId); // this will return ALL licenses
 ```
 ## Dependencies
 
