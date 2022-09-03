@@ -1,0 +1,38 @@
+{
+  "name": "sendowl-js",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "description": "An updated node.js wrapper for the SendOwl API",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "test/run_tests.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imreyne/sendowl-js.git"
+  },
+  "keywords": [
+    "sendowl",
+    "ecommerce",
+    "downloads"
+  ],
+  "author": "Alexander Reyne <me@alexreyne.com> (https://alexreyne.com/)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/imreyne/sendowl-js/issues"
+  },
+  "homepage": "https://github.com/imreyne/sendowl-js#readme",
+  "devDependencies": {
+    "@phoenix35/eslint-config": "github:Phoenix35/eslint-config",
+    "eslint": "^8.23.0",
+    "eslint-plugin-jsdoc": "^39.3.6",
+    "eslint-plugin-node": "^11.1.0"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "underscore": "^1.13.4"
+  }
+}
