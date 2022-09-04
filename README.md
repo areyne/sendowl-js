@@ -87,6 +87,15 @@ sendowl.products.licenses(productId, true); // this will only return AVAILABLE l
 sendowl.products.licenses(productId, false); // this will only return USED licenses
 sendowl.products.licenses(productId); // this will return ALL licenses
 ```
+
+Checking if a product license is valid
+```js
+keyObject = {
+    key: 'license_code_here',
+}
+
+sendowl.products.checkLicense(productId, keyObject);
+```
 ## Dependencies
 
 `axios` - that's it.
