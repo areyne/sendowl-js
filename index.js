@@ -113,6 +113,15 @@ class Products extends Resource {
         return res;
     }
 
+    checkLicense (productId, keyObj) {
+        const urlParams = new URLSearchParams(keyObj);
+        const path = `/api/v1/products/${productId}/licenses/check_valid`;
+
+        const res = this.req('POST', path, urlParams);
+
+        return res;
+    }
+
     // avail truthy = only available keys, avail false = only used keys, no avail = all keys
 
     async licenses (productId, avail) {
