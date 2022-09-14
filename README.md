@@ -5,18 +5,19 @@ sendowl-js is currently in development, and will have more features added in the
 
 ## Features
 
-- Index all orders (with filtering)
+- Index all orders. (with filtering)
 - Search, retrieve, and update orders.
-- Index all products (no filtering)
-- Search, retrieve, update, delete, and issue products.
-- Retrieve all keys associated with a product (Available, used, or both)
+- Index all products and subscriptions. (no filtering)
+- Search, retrieve, update, delete, and issue products and subscriptions.
+- Retrieve all keys associated with a product. (Available, used, or both)
+- Check for license validity of specific products.
 
 ## Planned Features
 
-- Add support for Bundles, Subscriptions, Drip Items, and Discounts.
-- Add support for license checks
-- Add support for product creation
-- Make better documentation
+- Add support for Bundles, Drip Items, and Discounts.
+- ~~Add support for license checks.~~
+- Add support for product creation.
+- Make better documentation.
 
 ## Installation
 

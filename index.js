@@ -153,9 +153,63 @@ class Products extends Resource {
         return res;
     }
 }
+
+class Subscriptions extends Resource {
+    index () {
+        const path = '/api/v1_3/subscriptions';
+
+        const res = this.req('GET', path);
+
+        return res;
+    }
+
+    search (filter) { // term only
+        const urlParams = new URLSearchParams(filter);
+
+        const path = '/api/v1_3/subscriptions/search';
+
+        const res = this.req('GET', path, urlParams);
+
+        return res;
+    }
+
+    get (subscriptionId) {
+        const path = `/api/v1_3/subscriptions/${subscriptionId}`;
+
+        const res = this.req('GET', path);
+
+        return res;
+    }
+
+    update (subscriptionId, data) {
+        const path = `/api/v1_3/subscriptions/${subscriptionId}`;
+
+        const res = this.req('PUT', path, undefined, data);
+
+        return res;
+    }
+
+    delete (subscriptionId) {
+        const path = `/api/v1_3/subscriptions/${subscriptionId}`;
+
+        const res = this.req('DELETE', path);
+
+        return res;
+    }
+
+    // data must be in proper format from the sendowl api page, update readme to include this.
+    issue (subscriptionId, data) {
+        const path = `/api/v1_3/subscriptions/${subscriptionId}/issue`;
+
+        const res = this.req('POST', path, undefined, data);
+
+        return res;
+    }
+}
 export const SendOwl = function (options = {}) {
     this.orders = new Orders(options);
     this.products = new Products(options);
+    this.subscriptions = new Subscriptions(options);
 };
 
 export default {
