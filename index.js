@@ -206,10 +206,48 @@ class Subscriptions extends Resource {
         return res;
     }
 }
+
+class Discounts extends Resource {
+    index () {
+        const path = '/api/v1_2/discounts';
+
+        const res = this.req('GET', path);
+
+        return res;
+    }
+
+    search (filter) { // discount code
+        const urlParams = new URLSearchParams(filter);
+
+        const path = '/api/v1_2/discounts/search';
+
+        const res = this.req('GET', path, urlParams);
+
+        return res;
+    }
+
+    update (discountId, data) {
+        const path = `/api/v1_2/discounts/${discountId}`;
+
+        const res = this.req('PUT', path, undefined, data);
+
+        return res;
+    }
+
+    delete (discountId) {
+        const path = `/api/v1_2/discounts/${discountId}`;
+
+        const res = this.req('DELETE', path);
+
+        return res;
+    }
+}
+
 export const SendOwl = function (options = {}) {
     this.orders = new Orders(options);
     this.products = new Products(options);
     this.subscriptions = new Subscriptions(options);
+    this.discounts = new Discounts(options);
 };
 
 export default {

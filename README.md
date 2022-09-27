@@ -3,6 +3,8 @@
 
 sendowl-js is currently in development, and will have more features added in the coming weeks.
 
+ - Discounts are currently in a development state, but have index, search, update, and delete functions.
+
 ## Features
 
 - Index all orders. (with filtering)
@@ -14,7 +16,7 @@ sendowl-js is currently in development, and will have more features added in the
 
 ## Planned Features
 
-- Add support for Bundles, Drip Items, and Discounts.
+- Add support for Bundles and Drip Items.
 - ~~Add support for license checks.~~
 - Add support for product creation.
 - Make better documentation.
