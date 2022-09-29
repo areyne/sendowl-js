@@ -23,7 +23,6 @@ class Resource {
     }
 }
 
-
 class Orders extends Resource {
     index (filter) { // from, to, orderable, state, referred_by, sort | nothing exclusive
         const urlParams = new URLSearchParams(filter);
@@ -216,6 +215,14 @@ class Discounts extends Resource {
         return res;
     }
 
+    get (discountId) {
+        const path = `/api/v1_2/discounts/${discountId}`;
+
+        const res = this.req('GET', path);
+
+        return res;
+    }
+
     search (filter) { // discount code
         const urlParams = new URLSearchParams(filter);
 
@@ -234,6 +241,40 @@ class Discounts extends Resource {
         return res;
     }
 
+    create (data) { // can generate multiple one-time-use codes or one multi-use code. Returns new codes in json.
+        const path = '/api/v1_2/discounts';
+
+        const res = this.req('POST', path, undefined, data);
+
+        return res;
+    }
+
+    delete (discountId) {
+        const path = `/api/v1_2/discounts/${discountId}`;
+
+        const res = this.req('DELETE', path);
+
+        return res;
+    }
+}
+
+class Codes extends Resource {
+    index () {
+        const path = '/api/v1_2/discounts';
+
+        const res = this.req('GET', path);
+
+        return res;
+    }
+
+    create (discountId, data) {
+        const path = `/api/v1_2/discounts/${discountId}/discount_codes`;
+
+        const res = this.req('POST', path, undefined, data);
+
+        return res;
+    }
+
     delete (discountId) {
         const path = `/api/v1_2/discounts/${discountId}`;
 
@@ -248,6 +289,7 @@ export const SendOwl = function (options = {}) {
     this.products = new Products(options);
     this.subscriptions = new Subscriptions(options);
     this.discounts = new Discounts(options);
+    this.codes = new Codes(options);
 };
 
 export default {

@@ -1,25 +1,19 @@
 # sendowl-js
-### A barebones, updated Node.JS Wrapper for the SendOwl API
+### A Node.JS Wrapper for the SendOwl API
 
-sendowl-js is currently in development, and will have more features added in the coming weeks.
-
- - Discounts are currently in a development state, but have index, search, update, and delete functions.
+sendowl-js is currently in a development state. All available functionality in the SendOwl API will be supported.
 
 ## Features
-
-- Index all orders. (with filtering)
-- Search, retrieve, and update orders.
-- Index all products and subscriptions. (no filtering)
-- Search, retrieve, update, delete, and issue products and subscriptions.
-- Retrieve all keys associated with a product. (Available, used, or both)
-- Check for license validity of specific products.
-
-## Planned Features
-
-- Add support for Bundles and Drip Items.
-- ~~Add support for license checks.~~
-- Add support for product creation.
-- Make better documentation.
+- Basic CRUD functionality through the SendOwl API for
+	- Orders
+	- Products
+	- Subscriptions
+	- Discounts
+		- Discount Codes
+- License Management
+	- Issue Product & Subscription Licenses
+	- Validate individual licenses
+	- Index all valid or invalid licenses for product.
 
 ## Installation
 
