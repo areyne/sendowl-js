@@ -116,7 +116,7 @@ class Products extends Resource {
         const urlParams = new URLSearchParams(keyObj);
         const path = `/api/v1/products/${productId}/licenses/check_valid`;
 
-        const res = this.req('POST', path, urlParams);
+        const res = this.req('GET', path, urlParams);
 
         return res;
     }
